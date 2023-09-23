@@ -9,7 +9,6 @@ export const Button = styled.button`
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
-  margin-top: 20px;
   transition: background-color 0.3s ease-in-out;
   width: 100px;
   height: 40px;
@@ -20,6 +19,7 @@ export const InputContainer = styled.div`
   gap: 2rem;
   padding: 2rem 0;
 `;
+
 export const ButtonContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -36,4 +36,23 @@ export const MainContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`;
+
+export const InputSubContainer = styled.div`
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+`;
+
+export const Heading = styled.h1`
+  font-size: 3rem;
+  text-align: center;
+`;
+
+export const InputStyles = styled.input`
+  width: 100px;
+  height: 50px;
+  border: none;
+  padding: 0;
+  background-color: transparent;
 `;

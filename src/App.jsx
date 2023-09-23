@@ -2,96 +2,77 @@ import { useState } from 'react';
 import {
   Button,
   ButtonContainer,
+  Heading,
   InputContainer,
+  InputStyles,
+  InputSubContainer,
   MainContainer,
 } from './styles';
 
 function App() {
-  const [col1, setCol1] = useState('#d9a7c7');
-  const [col2, setCol2] = useState('#fffcdc');
-  const [direction, setDirection] = useState('right');
+  const [color1, setColor1] = useState('#d9a7c7');
+  const [color2, setColor2] = useState('#fffcdc');
+  const [gradientDirection, setGradientDirection] = useState('right');
 
   return (
     <MainContainer
       style={{
-        backgroundImage: `linear-gradient(to ${direction}, ${col1}, ${col2})`,
+        backgroundImage: `linear-gradient(to ${gradientDirection}, ${color1}, ${color2})`,
       }}
     >
-      <h1 style={{ fontSize: '3rem', textAlign: 'center' }}>
-        Gradient Color Selector
-      </h1>
-
-      {/* <p>Choose Direction</p> */}
+      <Heading>Gradient Color Selector</Heading>
 
       <ButtonContainer>
         <Button
-          onClick={() => setDirection('top')}
-          isSelected={direction === 'top'}
+          onClick={() => setGradientDirection('top')}
+          isSelected={gradientDirection === 'top'}
         >
           Top
         </Button>
 
         <Button
-          onClick={() => setDirection('right')}
-          isSelected={direction === 'right'}
+          onClick={() => setGradientDirection('right')}
+          isSelected={gradientDirection === 'right'}
         >
           Right
         </Button>
 
         <Button
-          onClick={() => setDirection('bottom')}
-          isSelected={direction === 'bottom'}
+          onClick={() => setGradientDirection('bottom')}
+          isSelected={gradientDirection === 'bottom'}
         >
           Bottom
         </Button>
 
         <Button
-          onClick={() => setDirection('left')}
-          isSelected={direction === 'left'}
+          onClick={() => setGradientDirection('left')}
+          isSelected={gradientDirection === 'left'}
         >
           Left
         </Button>
       </ButtonContainer>
 
       <InputContainer>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column-reverse',
-            alignItems: 'center',
-          }}
-        >
-          <input
+        <InputSubContainer>
+          <InputStyles
             type="color"
-            value={col1}
-            onChange={(e) => setCol1(e.target.value)}
-            style={InputStyles}
+            value={color1}
+            onChange={(e) => setColor1(e.target.value)}
           />
-          {col1.toUpperCase()}
-        </div>
-        <div style={{  display: 'flex',
-            flexDirection: 'column-reverse',
-            alignItems: 'center', }}>
-          <input
+          {color1.toUpperCase()}
+        </InputSubContainer>
+
+        <InputSubContainer>
+          <InputStyles
             type="color"
-            value={col2}
-            onChange={(e) => setCol2(e.target.value)}
-            style={InputStyles}
+            value={color2}
+            onChange={(e) => setColor2(e.target.value)}
           />
-          {col2.toUpperCase()}
-        </div>
+          {color2.toUpperCase()}
+        </InputSubContainer>
       </InputContainer>
     </MainContainer>
   );
 }
 
 export default App;
-
-// Styles
-const InputStyles = {
-  width: '100px',
-  height: '50px',
-  border: 'none',
-  padding: '0',
-  backgroundColor: 'transparent',
-};

@@ -1,15 +1,15 @@
 import { useState } from 'react';
-
-const height = window.innerHeight;
+import { Button } from './styles';
 
 function App() {
   const [col1, setCol1] = useState('#d9a7c7');
   const [col2, setCol2] = useState('#fffcdc');
   const [direction, setDirection] = useState('right');
+
   return (
     <div
       style={{
-        height: height,
+        height: '100vh',
         backgroundImage: `linear-gradient(to ${direction}, ${col1}, ${col2})`,
         display: 'flex',
         flexDirection: 'column',
@@ -17,15 +17,37 @@ function App() {
         alignItems: 'center',
       }}
     >
-      <h1 style={{ fontSize: '3rem' }}>Gradient Color Selector</h1>
+      <h1 style={{ fontSize: '3rem', textAlign: 'center' }}>
+        Gradient Color Selector
+      </h1>
       <p>Choose Direction</p>
-      <div>
-        <button>Top</button>
-        <button>Right</button>
-        <button>Bottom</button>
-        <button>Left</button>
+      <div style={ComponentGapStyles}>
+        <Button
+          onClick={() => setDirection('top')}
+          isSelected={direction === 'top'}
+        >
+          Top
+        </Button>
+        <Button
+          onClick={() => setDirection('right')}
+          isSelected={direction === 'right'}
+        >
+          Right
+        </Button>
+        <Button
+          onClick={() => setDirection('bottom')}
+          isSelected={direction === 'bottom'}
+        >
+          Bottom
+        </Button>
+        <Button
+          onClick={() => setDirection('left')}
+          isSelected={direction === 'left'}
+        >
+          Left
+        </Button>
       </div>
-      <div style={{ display: 'flex', gap: '2rem' }}>
+      <div style={ComponentGapStyles}>
         <input
           type="color"
           value={col1}
@@ -52,4 +74,9 @@ const InputStyles = {
   border: 'none',
   padding: '0',
   backgroundColor: 'transparent',
+};
+
+const ComponentGapStyles = {
+  display: 'flex',
+  gap: '2rem',
 };

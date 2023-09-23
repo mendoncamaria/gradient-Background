@@ -11,6 +11,8 @@ export const Button = styled.button`
   font-size: 16px;
   margin-top: 20px;
   transition: background-color 0.3s ease-in-out;
+  width: 100px;
+  height: 40px;
 `;
 
 export const InputContainer = styled.div`

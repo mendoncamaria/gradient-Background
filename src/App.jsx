@@ -21,7 +21,7 @@ function App() {
         Gradient Color Selector
       </h1>
 
-      <p>Choose Direction</p>
+      {/* <p>Choose Direction</p> */}
 
       <ButtonContainer>
         <Button
@@ -54,19 +54,32 @@ function App() {
       </ButtonContainer>
 
       <InputContainer>
-        <input
-          type="color"
-          value={col1}
-          onChange={(e) => setCol1(e.target.value)}
-          style={InputStyles}
-        />
-
-        <input
-          type="color"
-          value={col2}
-          onChange={(e) => setCol2(e.target.value)}
-          style={InputStyles}
-        />
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column-reverse',
+            alignItems: 'center',
+          }}
+        >
+          <input
+            type="color"
+            value={col1}
+            onChange={(e) => setCol1(e.target.value)}
+            style={InputStyles}
+          />
+          {col1.toUpperCase()}
+        </div>
+        <div style={{  display: 'flex',
+            flexDirection: 'column-reverse',
+            alignItems: 'center', }}>
+          <input
+            type="color"
+            value={col2}
+            onChange={(e) => setCol2(e.target.value)}
+            style={InputStyles}
+          />
+          {col2.toUpperCase()}
+        </div>
       </InputContainer>
     </MainContainer>
   );

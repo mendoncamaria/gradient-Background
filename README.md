@@ -1,13 +1,29 @@
-# React + Vite
+<h1> Gradient Background Selector Website</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This website is particularly built as a part of my Learning Vite and initializing ReactJS Application.
 
-Currently, two official plugins are available:
+This project is inspired by [https://jsgradientgener.ccbp.tech/](https://jsgradientgener.ccbp.tech/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## About the Project
+### Overview
+You will have 2 color blocks with default colors set. You can select and change colors. The colors change when you select new color or go through gradient
 
+### Tech Stack
+ReactJS + Vite
 
-Inspiration: [https://jsgradientgener.ccbp.tech/](https://jsgradientgener.ccbp.tech/)
+### External Libraries
+styled-components: For styling the components and page
 
-installed packages- styled components
+### Deployment Platform
+Netlify
+
+## Note:
+Do credit me if you plan to use this project.
+
+## Steps to Install
+1. Clone the project
+2. Run `npm install` to install all dependencies
+3. Run `npm run dev`
+
+<hr />
+&copy; Maria Mendonca

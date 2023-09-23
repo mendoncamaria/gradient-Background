@@ -9,3 +9,5 @@ Currently, two official plugins are available:
 
 
 Inspiration: [https://jsgradientgener.ccbp.tech/](https://jsgradientgener.ccbp.tech/)
+
+installed packages- styled components

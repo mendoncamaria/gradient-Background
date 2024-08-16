@@ -26,4 +26,4 @@ Do credit me if you plan to use this project.
 3. Run `npm run dev`
 
 <hr />
-&copy; Maria Mendonca
+<center>&copy; Maria Mendonca</center>

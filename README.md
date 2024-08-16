@@ -12,7 +12,7 @@ You will have 2 color blocks with default colors set. You can select and change 
 ReactJS + Vite
 
 ### External Libraries
-styled-components: For styling the components and page
+styled-components:
 
 ### Deployment Platform
 Netlify

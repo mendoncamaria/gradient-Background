@@ -31,7 +31,8 @@ export const ButtonContainer = styled.div`
 `;
 
 export const MainContainer = styled.div`
-  height: 100vh;
+  min-height: calc(100vh - 3.1rem);
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,4 +56,16 @@ export const InputStyles = styled.input`
   border: none;
   padding: 0;
   background-color: transparent;
+`;
+
+export const Footer = styled.footer`
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+`;
+
+export const FooterLink = styled.a`
+  text-decoration: none;
+  color: white;
 `;

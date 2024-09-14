@@ -6,7 +6,7 @@ This project is inspired by [https://jsgradientgener.ccbp.tech/](https://jsgradi
 
 ## About the Project
 ### Overview
-You will have 2 color blocks with default colors set. You can select and change colors. The colors change when you select new color or go through gradient
+You will have 2 color blocks with default colors set. You can select and change colors. The colors change when you select a new color
 
 ### Tech Stack
 ReactJS + Vite
